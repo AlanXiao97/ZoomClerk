@@ -1,2 +1,3 @@
 # ZoomClerk
-This repository contains the project that I built to automate the process of booking large numbers of zoom meetings
+This repository contains the project that I built to automate the process of booking large numbers of zoom meetings. My intention is to automate some routine works of my current part-time job and at the same time practice my coding skills.
+Right now, it can read from a csv file to gather information like the title, host user id, starting date, and duration time of the meeting, and produce a post request form based on these information. The request will be used to schedule zoom meetings. The meeting urls and passcodes will be returned and recorded in the original csv file. Due to the way zoom authentication works, this only works with my zoom account. Other people may need to use their own jwt token to use this. I am diving into Zoom API to learn another authentication mechanism that allows scheduling meetings for other users.
