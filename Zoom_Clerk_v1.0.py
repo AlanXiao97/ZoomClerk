@@ -14,8 +14,8 @@ def generateToken(expiration_time):
 	expiration=current_time+datetime.timedelta(seconds=expiration_time)
 	converted_expiration= round(expiration.timestamp())
 	# generate payload using ApiKey and set expiration time
-	payload={"iss": "RnKII2lPTv-wV3GBoNUh7g","exp": converted_expiration}
-	encoded_jwt = jwt.encode(payload,"72jJuPoPgeYK37SaZYFMgVmoaLpbZVclAvJH", algorithm="HS256")
+	payload={"iss": "API Key","exp": converted_expiration}
+	encoded_jwt = jwt.encode(payload,"API Secret", algorithm="HS256")
 	return encoded_jwt
 
 # schedule the meeting
